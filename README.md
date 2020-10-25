@@ -1,11 +1,11 @@
-# AWWWARDS.
+# AWWARDS.
 :joy:
 
 ## Author 
 * Anna Adhiambo.
 
 ## Description.
-* 
+* Application to post projects to be rated by other users and visit the particular projects site.
 * Here is the [link]() to my website.
 
 ## How to access this
@@ -17,6 +17,12 @@ $ git clone link
 $ cd directory-name(Password)
 $ code .
 ```
+
+## Features
+* User can log in to application and view other peoples posts.
+* A user can rate o a post.
+* A user can upload posts and edit their profile.
+* Admin can regulate images uploaded by deleting from the admin dashboard as well as completely close a users account.
 
 ## Running the process
 * . virtual/bin/activate
