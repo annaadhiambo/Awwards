@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
 import random
 
@@ -14,6 +16,26 @@ def home(request):
         posts = None
 
     return render(request, 'photo/home.html', locals())
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'photo/home.html'
+    locals_object_name = 'posts'
+
+class PostDetailView(ListView):
+    model = Post
+    template_name = 'photo/post_detail.html'
+
+class PostCreateView(LoginRequiredMixin, CreateView):
+    model = Post
+    fields = ['image', 'title', 'description', 'image_url','author','date_posted']
+    template_name = 'photo/post_form.html'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+
 
 
 def search_results(request):
