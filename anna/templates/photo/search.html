@@ -19,11 +19,12 @@
           <h1>{{username.user}}</h1>
           <img class="rounded-circle account-img" src="{{ username.image.url }}">
       </div>
+      <a class="d-block mx-auto" href="/">
+        <button class="btn btn-sm btn-info d-block mx-auto">Back Home</button>
+      </a>
     {% endfor %}
   {% endif %}
   </div>
 </div>
-<a class="d-block mx-auto" href="/">
-  <button class="btn btn-sm btn-info d-block mx-auto">Back Home</button>
-</a>
+
 {% endblock %}
