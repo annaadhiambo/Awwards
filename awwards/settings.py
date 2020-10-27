@@ -71,6 +71,7 @@ INSTALLED_APPS = [
     'users',
     'crispy_forms',
     'bootstrap3',
+    'star_ratings',
 ]
 
 MIDDLEWARE = [
@@ -171,4 +172,7 @@ MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
+STAR_RATINGS_RERATE = False
+STAR_RATINGS_RANGE = 5
+STAR_RATINGS_ANONYMOUS = False
 django_heroku.settings(locals())

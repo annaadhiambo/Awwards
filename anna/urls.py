@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import  PostDetailView, PostCreateView,home
+from .views import   PostDetailView, PostCreateView,home
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings

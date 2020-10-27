@@ -1,5 +1,10 @@
 {% extends "photo/base.html" %}
+{% load static %}
+{% load ratings %}
 {% block content %}
+{{block.super}}
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+
 <div class="container-fluid">
     <div class="row">
         <div style="height: 450px; width: 100%;  background-image: url('{{ random_post.image.url}}');">
@@ -15,6 +20,7 @@
                         <p>{{ post.description }}</p>
                         <a target="_blank" href="{{post.image_url}}"><strong>Visit Website</strong></a>
                         <p>By {{ post.author }}</p>
+                        <p>{% ratings post %}</p>
                         <small>{{ post.date_posted|date:"F d, Y" }}</small>
                     </div> 
                     {% endfor %}
@@ -22,4 +28,5 @@
            </div>
     </div>
 </div>
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
 {% endblock content %}
