@@ -37,7 +37,6 @@
               <!-- Navbar Right Side -->
               <div class="navbar-nav">
                 {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="{% url 'post-create' %}" style="color: black;">New Post</a>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img class="rounded-circle" width="30" height="30" src="{{ user.profile.image.url }}">
@@ -46,6 +45,7 @@
                     <a class="nav-item nav-link" href="{% url 'logout' %}" style="color: black;">Logout</a>
                   </div>
                 </li>
+                <button class="btn btn-info"><a class="nav-item nav-link" href="{% url 'post-create' %}" style="color: black;">Submite Site</a></button>
                 {% else %}
                   <a class="nav-item nav-link" style="color: black;" href="{% url 'login' %}">Login</a>
                   <a class="nav-item nav-link" style="color: black;" href="{% url 'register' %}">Register</a>
