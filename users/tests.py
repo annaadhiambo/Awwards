@@ -53,5 +53,4 @@ class TestProfileModel(TestCase):
         profile = Profile.objects.all()
         self.assertTrue(str(profile[0]),f'{self.profile.user.username} Profile')
 
-class TestViews(TestCase):
     
