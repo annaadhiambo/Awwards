@@ -31,7 +31,7 @@ class Username(models.Model):
         self.delete()
 
     def update_username(self):
-        self.delete()
+        self.save()
         
     
     @classmethod
