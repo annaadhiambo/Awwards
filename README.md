@@ -27,7 +27,7 @@ $ code .
 ## Running the process
 * . virtual/bin/activate
 * To open local server run python3 manage.py runserver
-* To run the test,run python manage.py test instagram
+* To run the test,run python manage.py test awwards
 
 ## Technology used
 * Python language.
